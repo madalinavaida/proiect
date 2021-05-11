@@ -6,7 +6,7 @@
 const cookieValue = document.cookie
   .split('; ')
   .find(row => row.startsWith('test2='))
-  .split('=')[1];
+  .split('=')[2];
 
 function alertCookieValue() {
   alert(cookieValue);
