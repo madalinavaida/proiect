@@ -1,17 +1,14 @@
-<script>
-  allCookies = document.cookie;
-  document.cookie = "test1=Hello";
-  document.cookie = "test2=World";
+<div id="example"></div>
 
-const cookieValue = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('test2='))
-  .split('=')[2];
+<script type="text/javascript">
 
-function alertCookieValue() {
-  alert(cookieValue);
-}
+txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+txt+= "<p>Browser Name: " + navigator.appName + "</p>";
+txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
+txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+txt+= "<p>Platform: " + navigator.platform + "</p>";
+txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+
+document.getElementById("example").innerHTML=txt;
+
 </script>
-<body> Bine ai venit la lab 
-  <button onclick="alertCookieValue()">Show cookie value</button>
-</body>
