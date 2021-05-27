@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+.btn:not(.custom) {
+	width:250px;;
+}
+.input-group-append, inputCstm {
+	display:inline-block;
+}
+<hr>
+Vaida Alexandra-Madalina
+<hr>
+<hr>
+<div class="row">
+	<div class="col-sm-3">  
+		<input id="nameInput" type="text" class="form-control " placeholder="Numele dvs. complet" aria-label="Recipient's username" aria-describedby="basic-addon2">
+	</div>
+	<div class="col-sm-3">
+		<button class="btn btn-success custom" type="button" id="addNameBtn" onclick="setNameCookie()">Save</button>
+		<button style="display:none;" class="btn btn-primary custom" type="button" id="editNameBtn" onclick="setNameCookie()">Refresh</button>
+	</div>
+</div>
+<br><br><br>
+Cookies:<br>
+Nume: <b><span id="nameCookie"></span></b><br>
+Browser: <b><span id="browserCookie"></span></b><br>
+Operating system <b><span id="soCookie"></span></b><br>
+<hr>
+<div class="Nota de informare" style="text-align:left;padding:0 30px 30px 30px">
+<button id="titluInfo" class="btn btn-outline-secondary custom" onclick="displayInfo()">NOTĂ DE INFORMARE PRIVIND PROTECŢIA DATELOR PERSONALE +</button>
+
+<div id="textInfo" style="display:none;"><br><br><br>
+Universitatea Tehnica din Cluj-Napoca în calitate de operator de date cu caracter personal, în conformitate cu prevederile Legii nr.190/2018 privind măsuri de punere în aplicare a Regulamentului (UE) 2016/679 al Parlamentului European şi al Consiliului din 27 aprilie 2016 privind protecţia persoanelor fizice în ceea ce priveşte prelucrarea datelor cu caracter personal şi privind libera circulaţie a acestor date şi de abrogare a Directivei 95/46/CE (Regulamentul general privind protecţia datelor),  prelucrează datele cu caracter personal ce îi sunt furnizate în mod voluntar sau în posesia cărora intră în mod indirect.
+
+Regulamentul (UE) 2016/679 privind protecția persoanelor fizice în ceea ce privește prelucrarea datelor cu caracter personal si privind libera circulație a acestor date a fost adoptat de Parlamentul European şi Consiliu în data de 27 aprilie 2016, publicat în Jurnalul Oficial al Uniunii L119 din 4 mai 2016, prevederile lui fiind aplicabile începând cu data de 25 mai 2021.
+Universitatea Tehnica din Cluj-Napoca  este preocupată în mod constant de asigurarea unei protecții ridicate a datelor cu caracter personal, pe care le prelucrează conform cadrului legal în vigoare.
+
+DEFINIȚII IMPORTANTE
+
+Prin ,,prelucrare’’ se înțelege orice operațiune sau set de operațiuni efectuate asupra datelor cu caracter personal sau asupra seturilor de date cu caracter personal, cu sau fara utilizarea de mijloace automatizate, cum ar fi colectarea, înregistrarea, organizarea, structurarea, stocarea, adaptarea sau modificarea, extragerea, consultarea, utilizarea, divulgarea prin transmitere, diseminarea sau punerea la dispoziție în orice alt mod, alinierea sau combinarea, restricționarea, ștergerea sau distrugerea.
+Prin ,,date cu caracter personal’’ se înțeleg  informațiile privind o persoană fizică identificată sau identificabilă ( ,,persoana vizată’’); orice persoană fizică identificabilă este o persoană care poate fi identificată, direct sau indirect, în special prin referire la un element de identificare, cum ar fi un nume, un numar de identificare, date de localizare, un identificator online, sau la unul sau mai multe elemente specifice, proprii identității sale fizice, fiziologice, genetice, psihice, economice, culturale sau sociale.
+O ”persoană vizată” înseamnă orice persoană ale cărei date sunt colectate, reținute sau procesate.
+
+SCOPUL COLECTĂRII ȘI PRELUCRĂRII DATELOR CU CARACTER PERSONAL
+Scopul acestei colectări și prelucrări de date este asigurarea transmiterii datelor in mod clar si corect ale masterandului de la eActivitati, care are inclus si un stagiu de mobilitate Erasmus in UK. 
+UTCN si Universitatea din UK  păstrează datele cu caracter personal numai pe perioada necesară îndeplinirii scopurilor pentru care au fost colectate, iar ulterior pentru timpul necesar în conformitate cu prevederile legale în vigoare referitoare la arhivare.
+UTCN prelucrează datele cu caracter personal ale următoarelor categorii de persoane fizice:
+1.	Studenți, părinți și reprezentanți ai acestora, candidați la examenele de admitere, foști studenți ai UTCN;
+2.	cadre didactice, cadre didactice auxiliare si personal nedidactic, candidați la concursurile de ocupare a posturilor, foști angajați;
+3.	orice persoană care patrunde în spațiul universitar dotat cu sistem de supraveghere video.
+
+DATE CU CARACTER PERSONAL
+- nume, prenume, 
+-CNP, seria si nr,CI/Pașaport,
+-data si locul nașterii, cetățenia,
+-semnătura, datele consemnate în actele de stare civilă, domiciliul, profesie,
+-loc de muncă, formare profesională, situație familială, situație militară, asigurări de sănătate si sociale, date bancare, accidente de muncă, datele consemnate în Curriculum vitae, situația medicala, informații cu privire la studiile efectuate, inclusiv note obținute pe parcursul studiilor.
+
+PERIOADA DE STOCARE
+Datele cu caracter personal sunt stocate pe perioada derulării contractelor, perioada derulării proiectelor, perioada școlarizării sau pe perioada necesară îndeplinirii scopurilor pentru care datele au fost colectate, cat si pe perioada cat masterandul efectueaza stagiul de mobilitate Erasmus in UK, ținând cont de termenele de prescripție aplicabile și de respectarea obligațiilor de arhivare impuse de legislația în vigoare. 
+
+TRANSFERUL DATELOR CU CARACTER PERSONAL
+Datele vor fi transferate in mod special catre si dinspre Universitatea din UK, care face parte din stagiul de mobilitate Erasmus, iar catre alte State ale UE, numai dacă acest lucru este strict necesar din punct de vedere al scopului colectării si doar cu respectarea prevederilor legale in vigoare, aplicand masuri de protectie adecvate si notificandu-va atunci cand este cazul.
+
+ACCESUL LA DATE CU CARACTER PERSONAL ȘI DESTINAȚIA ACESTOR DATE
+Accesul la datele cu caracter personal este realizat numai de către personalul celor doua universitati, pentru transferal acestor date. Datele cu caracter personal pot fi comunicate persoanelor din afara universității atunci când acest lucru este necesar pentru atingerea scopului prelucrării și/sau în cazurile prevăzute de lege. 
+
+CONSECINȚELE NEFURNIZĂRII DATELOR CU CARACTER PERSONAL
+Sunteţi obligat(ă) să furnizaţi datele, acestea fiind necesare asigurării accesului la educație și implementării proiectelor cu finanțare europeană. În cazul în care nu se dorește furnizarea informațiilor solicitate, UTCN își rezervă dreptul de a refuza orice fel de colaborare, inclusiv de a nu acorda accesul în incinta spațiilor universității.
+
+SECURIZAREA DATELOR
+UTCN asigură protecție și securitate adecvat privind protecția datelor personale, în vederea evitării distrugerii accidentale sau cu intenție, pierderii, modificării, dezvăluirii sau accesului neautorizat la acestea.
+
+DREPTURILE PERSOANEI VIZATE
+Conform Regulamentului (UE) nr.679 din 27 aprilie 2016, persoana vizată are urmatoarele drepturi:
+1.	Dreptul de informare art.13
+2.	Dreptul de acces al persoanei vizate art.15
+3.	Dreptul de rectificare art.16
+4.	Dreptul la ștergerea datelor art.17
+5.	Dreptul la restricționarea prelucrării art.18
+6.	Dreptul la portabilitatea datelor art.20
+7.	Dreptul la opoziție art.21
+EXERCITAREA DREPTURILOR
+Pentru întrebări sau nelămuriri cu privire la prelucrarea datelor cu caracter personal sau în vederea exercitării drepturilor legale, persoanele vizate se pot adresa responsabilului cu prelucrarea datelor (DPO) din cadrul UTCN.
+ACTUALIZARE
+Informarea prezentă poate face obiectul unor modificări ulterioare. Toate actualizările și modificările prezentei informări sunt valabile de la data aducerii la cunoștință și prin publicare pe site-ul UTCN.
+</div>
+</script>
+</html>
