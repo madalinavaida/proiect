@@ -88,5 +88,113 @@ Pentru întrebări sau nelămuriri cu privire la prelucrarea datelor cu caracter
 ACTUALIZARE
 Informarea prezentă poate face obiectul unor modificări ulterioare. Toate actualizările și modificările prezentei informări sunt valabile de la data aducerii la cunoștință și prin publicare pe site-ul UTCN.
 </div>
+</div>
+</div>
+</body>
+<script> 
+	let expandedInfo=false;
+	function alertCookie() { alert(document.cookie); }
+	// Opera 8.0+
+	var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+	// Firefox 1.0+
+	var isFirefox = typeof InstallTrigger !== 'undefined';
+
+	// Safari 3.0+ "[object HTMLElementConstructor]" 
+	var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+
+	// Internet Explorer 6-11
+	var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+	// Edge 20+
+	var isEdge = !isIE && !!window.StyleMedia;
+
+	// Chrome 1 - 79
+	var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
+	// Edge (based on chromium) detection
+	var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
+
+	// Blink engine detection
+	var isBlink = (isChrome || isOpera) && !!window.CSS;	
+	
+	if(isChrome && !isEdgeChromium){
+		document.cookie = "browser=chrome";
+		document.getElementById('browserCookie').innerHTML="chrome";
+	}
+	if(isOpera){
+		document.cookie = "browser=opera";
+		document.getElementById('browserCookie').innerHTML="opera";
+	}
+	if(isFirefox){
+		document.cookie = "browser=firefox";
+		document.getElementById('browserCookie').innerHTML="firefox";
+	}
+	if(isEdge || isEdgeChromium){
+		document.cookie = "browser=edge";
+		document.getElementById('browserCookie').innerHTML="edge";
+	}
+	if(isIE){
+		document.cookie = "browser=iexplorer";
+		document.getElementById('browserCookie').innerHTML="iexplorer";
+	}
+	var OSName = "Unknown";
+	if (window.navigator.userAgent.indexOf("Windows NT 10.0")!= -1) OSName="Windows 10";
+	if (window.navigator.userAgent.indexOf("Windows NT 6.3") != -1) OSName="Windows 8.1";
+	if (window.navigator.userAgent.indexOf("Windows NT 6.2") != -1) OSName="Windows 8";
+	if (window.navigator.userAgent.indexOf("Windows NT 6.1") != -1) OSName="Windows 7";
+	if (window.navigator.userAgent.indexOf("Windows NT 6.0") != -1) OSName="Windows Vista";
+	if (window.navigator.userAgent.indexOf("Windows NT 5.1") != -1) OSName="Windows XP";
+	if (window.navigator.userAgent.indexOf("Windows NT 5.0") != -1) OSName="Windows 2000";
+	if (window.navigator.userAgent.indexOf("Mac")            != -1) OSName="Mac/iOS";
+	if (window.navigator.userAgent.indexOf("X11")            != -1) OSName="UNIX";
+	if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName="Linux";
+	document.cookie = "operating-system="+OSName;
+	document.getElementById('soCookie').innerHTML=OSName;
+	let timezone = null;
+	timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+	if(timezone){
+	document.cookie = "timezone="+timezone;
+	}
+	document.getElementById('timezoneCookie').innerHTML=timezone;
+	function setNameCookie(){
+		let element = document.getElementById('nameInput');
+		document.cookie = "numeStudent="+element.value;
+		let btn1 = document.getElementById('addNameBtn');
+		btn1.style="display:none";
+		document.getElementById('nameCookie').innerHTML=element.value;
+	}
+	if(document.cookie){
+	let numeStudent =null;
+		const numeStudentKey = document.cookie
+		  .split('; ')
+		  .find(row => row.startsWith('numeStudent='));
+		   if( numeStudentKey){
+			const numeStudent  = numeStudentKey.split('=')[1];
+		}
+	 
+		if(numeStudent && numeStudent!=null && numeStudent!=undefined){
+			let element = document.getElementById('nameInput');
+			let btn1 = document.getElementById('addNameBtn');
+			btn1.style="display:none";
+			
+			element.value= numeStudent;
+			document.getElementById('nameCookie').innerHTML=numeStudent;
+		}
+	}
+	
+	
+	
+	function displayInfo(){
+		if(!expandedInfo){
+			document.getElementById('textInfo').style="display:block";
+			document.getElementById('titluInfo').innerHTML="NOTĂ DE INFORMARE PRIVIND PROTECŢIA DATELOR PERSONALE -";
+			expandedInfo=true;
+		} else {
+			document.getElementById('textInfo').style="display:none";
+			document.getElementById('titluInfo').innerHTML="NOTĂ DE INFORMARE PRIVIND PROTECŢIA DATELOR PERSONALE +";
+			expandedInfo=false;
+		}
+	}
 </script>
 </html>
