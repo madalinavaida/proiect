@@ -1,11 +1,15 @@
-<script>
-document.cookie = "session=test GDPR"; 
-document.cookie = "favorite_task=collect Data"; 
-function alertCookie() { alert(document.cookie); } 
-</script>
-<body> Bine ai venit la lab 
-<button onclick="alertCookie()">
-Show cookies
-</button> 
-</body>
+<div id="example"></div>
+
+<script type="text/javascript">
+
+txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+txt+= "<p>Browser Name: " + navigator.appName + "</p>";
+txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
+txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+txt+= "<p>Platform: " + navigator.platform + "</p>";
+txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+
+document.getElementById("example").innerHTML=txt;
+
+</script>>
 
